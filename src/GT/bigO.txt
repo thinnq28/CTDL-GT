@@ -1,0 +1,57 @@
+1. Định nghĩa
+    - Làm thế nào để đánh giá 1 chương trình có tốt/hiệu quả hay không?
+    -> Bộ nhớ | Space complexity
+    -> Thời gian | Time complexity
+2. Bộ nhớ
+ - là bộ nhớ mà chương trình/ thuật toán cần sử dụng khi thực thi chương trình đó
+ -> o(1): nếu chỉ sử dụng 1 bộ nhớ cố định
+ -> o(n), o(n^2),...: thay đổi theo input của bài toán
+ - Mục tiêu: tìm được phương án tối ưu (bộ nhớ) cho một vấn đề nào đó
+ - Giải pháp:
+ + tối ưu cách làm, phương pháp
+ + nâng cấp bộ nhớ (*)
+3. Thời gian
+ - Làm sao để biết 1 chương trình chạy nhanh hay chậm?
+ - Làm sao để miêu tả mức độ nhanh/chậm của một chương trình?
+4. Big O notation
+ - Định nghĩa: Độ phức tạp (về thời gian) là tổng thời gian/số phép tính toán mà chương trình cần để thực thi chương trình
+ - Example:
+ for(int i = 0; i < 10; i++){
+    int t = 2*i;
+    System.out.println(" 2 * " + i + " = " + t);
+ }
+
+ i = 1: 1
+ i < 10: n
+ i++: n
+ 2*i: n
+ t =: n
+ Print: n*4
+ ====
+ sum = 8 * n + 1
+ - Định nghĩa:
+ g(n) được gọi là O của f(n) nếu tồn tại C (>0, không phục thuộc vào n) và n0 sao cho với mọi n > n0 ta luôn có:
+ f(n) <= C.g(n)
+
+ f(n) = 8*n + 1
+ g(n) = n
+ C = 9
+ n0 = 1
+5. Các độ phức tạp cơ bản
+ - o(1): độ phức tạp hằng số
+ - o(log n): độ phức tạp logarit
+ - o(n): độ phức tạp tuyến tính
+ - o(n^k): độ phức tạp đa thức
+ - o(k^n): độ phức tạp hàm mũ
+ - quy tắc cộng: o = o(k1) + o(k2) = o(n)
+ - quy tắc nhân: o = o(k1) * o(k2) = o(n^2)
+6. Xác định độ phức tạp của một số thuật toán
+ - Tìm kiếm nhị phân: o(log n)
+ - Tìm kiếm tuần tự: o(n)
+ - Sắp xếp nổi bọt, duyệt ma trận 2 chiều: o(n^2)
+ - fibonacci: o(2^n)
+7. BigO của một số thuật toán
+ - thuật toán tìm kiếm tuần tự = o(n)
+ - thuật toán sắp xếp nổi bọt = o(n^2)
+ - thuật toán fibonacci = o(2^n)
+ - thuật toán tìm kiếm nhị phân = o(log2n*n)
